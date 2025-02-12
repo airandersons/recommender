@@ -22,7 +22,7 @@ def generate_movies_context():
 def movie_recommendation_view(request):
     if request.method == 'GET':
         # HINT: Get the movie recommendations from the database
-        context = {}
+        context = generate_movies_context()
         # Render the HTML template with the movie recommendations
         return render(request, 'movierecommender/movie_list.html', context)
 
